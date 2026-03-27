@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Weekend da Pendoli - GG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,14 @@
         body::before {
             content: '';
             position: fixed;
-            inset: 0;
+            top: env(safe-area-inset-top, 0px);
+            right: env(safe-area-inset-right, 0px);
+            bottom: env(safe-area-inset-bottom, 0px);
+            left: env(safe-area-inset-left, 0px);
+            margin: calc(-1 * env(safe-area-inset-top, 0px))
+                    calc(-1 * env(safe-area-inset-right, 0px))
+                    calc(-1 * env(safe-area-inset-bottom, 0px))
+                    calc(-1 * env(safe-area-inset-left, 0px));
             background-image: url('assets/sfondo_italia.png');
             background-size: cover;
             background-position: center;
