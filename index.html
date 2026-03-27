@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend da Pendoli - GG</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --bg: #f4f7f6;
+            --white: #ffffff;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            margin: 0;
+            padding: 15px;
+            line-height: 1.5;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 20px;
+        }
+        h1 { margin: 0; font-size: 1.5rem; text-transform: uppercase; }
+        .date { color: var(--accent); font-weight: bold; }
+        
+        /* Tabella Comparativa */
+        .table-container {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        th, td {
+            padding: 12px 8px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        th { background: #f8f9fa; font-weight: bold; }
+        .sticky-col {
+            position: sticky;
+            left: 0;
+            background: #f8f9fa;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Card Opzioni */
+        .option-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent);
+        }
+        .option-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background: #fdf2e9;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .itinerary {
+            list-style: none;
+            padding: 0;
+            font-size: 0.95rem;
+        }
+        .itinerary li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .itinerary li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        .pro-con {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            padding-top: 10px;
+            border-top: 1px dashed #ccc;
+        }
+        .price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Weekend da Pendoli</h1>
+    <div class="date">30 Aprile - 3 Maggio 2026</div>
+    <small>Progetto di Goodfellas Getaways (2025)</small>
+</header>
+
+<section>
+    <h3>Recap Comparativo</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="sticky-col">Criterio</th>
+                    <th>Ultra</th>
+                    <th>Molto</th>
+                    <th>Abbast.</th>
+                    <th>Appena</th>
+                    <th>Non</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="sticky-col">Tappe</td><td>4</td><td>4</td><td>3</td><td>2</td><td>1</td></tr>
+                <tr><td class="sticky-col">Eventi</td><td>3</td><td>2</td><td>1</td><td>2</td><td>1</td></tr>
+                <tr><td class="sticky-col">Km</td><td>1.596</td><td>1.585</td><td>1.360</td><td>1.220</td><td>1.050</td></tr>
+                <tr><td class="sticky-col">Viaggio</td><td>21:50h</td><td>22:10h</td><td>18:30h</td><td>9:45h</td><td>7:52h</td></tr>
+                <tr><td class="sticky-col">Sonno Tot.</td><td>26:15h</td><td>26:40h</td><td>27:40h</td><td>32h</td><td>32h</td></tr>
+                <tr><td class="sticky-col">Costo</td><td>€146</td><td>€137</td><td>€247</td><td>€236</td><td>€256</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<div class="option-card">
+    <div class="option-title">1. Ultra Pendolante</div>
+    <div class="stats">
+        <div>📍 4 Tappe</div>
+        <div>🎉 3 Eventi</div>
+        <div>🛣️ 1596 Km</div>
+        <div>⏱️ 22h Viaggio</div>
+    </div>
+    <ul class="itinerary">
+        <li><strong>30 Apr:</strong> Brescia → Milano (1D Night)</li>
+        <li><strong>1 Mag:</strong> Milano → Roma (Concertone) → Lido (Notte)</li>
+        <li><strong>2 Mag:</strong> Lido (Mare chill) → Milano (Sera)</li>
+        <li><strong>3 Mag:</strong> Stramilano → Ritorno</li>
+    </ul>
+    <div class="pro-con">
+        ✅ Crazy as fuck, Costo basso<br>
+        ❌ 2x nanne in viaggio
+    </div>
+    <div class="price">~ € 146,00</div>
+</div>
+
+<div class="option-card">
+    <div class="option-title">2. Molto Pendolante</div>
+    <div class="stats">
+        <div>📍 4 Tappe</div>
+        <div>🎉 2 Eventi</div>
+        <div>🛣️ 1585 Km</div>
+        <div>⏱️ 22h Viaggio</div>
+    </div>
+    <ul class="itinerary">
+        <li><strong>30 Apr:</strong> Brescia → Lido</li>
+        <li><strong>1 Mag:</strong> Lido → Roma (Concertone) → Lido (Notte)</li>
+        <li><strong>2 Mag:</strong> Lido (Mare chill) → Milano (Sera)</li>
+        <li><strong>3 Mag:</strong> Stramilano → Ritorno</li>
+    </ul>
+    <div class="pro-con">
+        ✅ Varietà ed epicità, Costo più basso<br>
+        ❌ Nanne in viaggio
+    </div>
+    <div class="price">~ € 136,88</div>
+</div>
+
+<div class="option-card">
+    <div class="option-title">3. Abbastanza Pendolante</div>
+    <div class="stats">
+        <div>📍 3 Tappe</div>
+        <div>🎉 1 Evento</div>
+        <div>🛣️ 1360 Km</div>
+        <div>⏱️ 18h Viaggio</div>
+    </div>
+    <ul class="itinerary">
+        <li><strong>30 Apr:</strong> Brescia → Lido</li>
+        <li><strong>1 Mag:</strong> Lido → Roma (Concertone) → Lido (Notte)</li>
+        <li><strong>2-3 Mag:</strong> Lido (2 giorni di mare chill) → Ritorno</li>
+    </ul>
+    <div class="pro-con">
+        ✅ 2 giorni di mare<br>
+        ❌ Costo più alto, Nanne in viaggio
+    </div>
+    <div class="price">~ € 246,88</div>
+</div>
+
+<div class="option-card">
+    <div class="option-title">4. Appena Pendolante</div>
+    <div class="stats">
+        <div>📍 2 Tappe</div>
+        <div>🎉 2 Eventi</div>
+        <div>🛣️ 1220 Km</div>
+        <div>⏱️ 10h Viaggio</div>
+    </div>
+    <ul class="itinerary">
+        <li><strong>30 Apr:</strong> Desenzano → Roma</li>
+        <li><strong>1 Mag:</strong> Roma (Concertone)</li>
+        <li><strong>2 Mag:</strong> Roma chill → Milano (Sera)</li>
+        <li><strong>3 Mag:</strong> Stramilano → Ritorno</li>
+    </ul>
+    <div class="pro-con">
+        ✅ Molto sonno, Miglior rapporto tappe-eventi<br>
+        ❌ Niente mare
+    </div>
+    <div class="price">~ € 236,00</div>
+</div>
+
+<div class="option-card">
+    <div class="option-title">5. Non Pendolante</div>
+    <div class="stats">
+        <div>📍 1 Tappa</div>
+        <div>🎉 1 Evento</div>
+        <div>🛣️ 1050 Km</div>
+        <div>⏱️ 8h Viaggio</div>
+    </div>
+    <ul class="itinerary">
+        <li><strong>30 Apr:</strong> Desenzano → Roma</li>
+        <li><strong>1-3 Mag:</strong> 3 giorni a Roma (Daje Roma daje)</li>
+        <li><strong>3 Mag:</strong> Ritorno da Roma</li>
+    </ul>
+    <div class="pro-con">
+        ✅ Massimo sonno, Relax totale<br>
+        ❌ Costo massimo, Scarsa epicità
+    </div>
+    <div class="price">~ € 256,00</div>
+</div>
+
+<footer>
+    © 2025-2026 Goodfellas Getaways - GG<sup>©</sup>
+</footer>
+
+</body>
+</html>
