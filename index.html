@@ -349,14 +349,29 @@
 
 <script src="config.js"></script>
 <script>
+    function formatStatValue(key, rawValue) {
+        if (key === 'viaggio') {
+            const [h, m] = rawValue.replace('h', '').split(':').map(Number);
+            return Math.round(h + m / 60) + 'h';
+        }
+        return rawValue;
+    }
+
+    function formatStatUnit(key, rawValue, defaultUnit) {
+        if (key === 'eventi') return rawValue === '1' ? 'Evento' : 'Eventi';
+        return defaultUnit;
+    }
+
     // --- Render cards ---
     const grid = document.getElementById('options-grid');
     const cardStats = tableRows.filter(r => r.card);
 
     options.forEach(opt => {
-        const statsHtml = cardStats.map(r =>
-            `<div class="stat-item">${r.emoji} ${opt.stats[r.key]} ${r.unit}</div>`
-        ).join('');
+        const statsHtml = cardStats.map(r => {
+            const val  = formatStatValue(r.key, opt.stats[r.key]);
+            const unit = formatStatUnit(r.key, opt.stats[r.key], r.unit);
+            return `<div class="stat-item">${r.emoji} ${val} ${unit}</div>`;
+        }).join('');
 
         const itineraryHtml = opt.itinerary.map(item =>
             `<li>${item}</li>`
