@@ -28,14 +28,19 @@
         body {
             font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: #e8dcc8;
-            background-image: url('assets/sfondo_italia.png');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
             color: var(--text-dark);
             line-height: 1.6;
             min-height: 100vh;
-            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url('assets/sfondo_italia.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
         }
         
         .container {
@@ -299,10 +304,6 @@
         /* Responsive */
         @media (max-width: 768px) {
             .options-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
                 grid-template-columns: 1fr;
             }
             
