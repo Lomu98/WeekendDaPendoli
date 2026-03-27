@@ -10,7 +10,7 @@ const tableRows = [
   { label: 'Tappe',               key: 'tappe',         emoji: '📍', unit: 'Tappe',   card: true  },
   { label: 'Eventi',              key: 'eventi',        emoji: '🎉', unit: 'Eventi',  card: true  },
   { label: 'Km percorsi',         key: 'km',            emoji: '🛣️', unit: 'Km',      card: true  },
-  { label: 'Ore di viaggio',      key: 'viaggio',       emoji: '⏱️', unit: '',        card: true  },
+  { label: 'Ore di viaggio',      key: 'viaggio',       emoji: '⏱️', unit: 'di viaggio',        card: true  },
   { label: 'Numero notti',        key: 'notti',         card: false },
   { label: 'Numero alloggi',      key: 'alloggi',       card: false },
   { label: 'Sonno in viaggio',    key: 'sonnoViaggio',  card: false },
